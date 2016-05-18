@@ -1,2 +1,0 @@
-# ltdp-
-web designer
