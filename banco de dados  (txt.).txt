@@ -1,0 +1,70 @@
+ 
+Database: `bd_centro_interesse`
+
+
+
+ Estrutura da tabela `tb_centro_interesse`
+
+
+CREATE TABLE `tb_centro_interesse` (
+  `id_centro_interesse` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `descricao` text NOT NULL,
+  `horario_inicio` time NOT NULL,
+  `horario_termino` time NOT NULL,
+  `orientador` varchar(255) NOT NULL,
+  `quantidade_vagas` int(11) NOT NULL,
+  `tipo` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+
+ Estrutura da tabela `tb_inscricao`
+
+
+CREATE TABLE `tb_inscricao` (
+  `id_inscricao` int(11) NOT NULL,
+  `matricula` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `turma` varchar(10) NOT NULL,
+  `centro_um` int(11) NOT NULL,
+  `centro_dois` int(11) NOT NULL,
+  `data` date NOT NULL,
+  `hora` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ Indexes for dumped tables
+
+
+
+ Indexes for table `tb_centro_interesse`
+
+ALTER TABLE `tb_centro_interesse`
+  ADD PRIMARY KEY (`id_centro_interesse`);
+
+
+ Indexes for table `tb_inscricao`
+
+ALTER TABLE `tb_inscricao`
+  ADD PRIMARY KEY (`id_inscricao`);
+
+
+ AUTO_INCREMENT for dumped tables
+
+
+
+ AUTO_INCREMENT for table `tb_centro_interesse`
+
+ALTER TABLE `tb_centro_interesse`
+  MODIFY `id_centro_interesse` int(11) NOT NULL AUTO_INCREMENT;
+
+
+ AUTO_INCREMENT for table `tb_inscricao`
+
+ 
+ALTER TABLE `tb_inscricao`
+  MODIFY `id_inscricao` int(11) NOT NULL AUTO_INCREMENT;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
